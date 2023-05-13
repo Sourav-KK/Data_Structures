@@ -5,14 +5,15 @@
 let arraySign = (nums) => {
     
     let multi = nums.reduce((acc, curr) => {
-        console.log(`multiplying ${acc} by ${curr}`);
         return acc * curr;
-    }, 1)
-    console.log(multi);
-    return Math.sign(multi);
+    })
+    if(multi > 1) return 1
+    if(multi < 0) return -1
+    return 0
 };
 
-let nums = [-1, -2, -3, -4, 3, 2];
+let nums = [-1,-2,-3,-4,3,2,1]
+console.log(arraySign(nums));
 
 // let arraySign = (nums) => {
 //     let curr = 1;
